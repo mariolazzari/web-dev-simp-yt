@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Resources from "./Resources";
+import Memo from "./Memo.js";
 
 function initState() {
   console.log("Init state");
@@ -18,12 +19,15 @@ function App() {
 
   return (
     <>
+      <h1>useState</h1>
       <button onClick={decrement}>-</button>
       <span>{count}</span>
       <span>{theme}</span>
       <button onClick={increment}>+</button>
       <hr />
       <Resources />
+      <hr />
+      <Memo />
     </>
   );
 }

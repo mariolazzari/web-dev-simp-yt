@@ -25,6 +25,7 @@ const Resources = () => {
 
   return (
     <>
+      <h1>useEffect</h1>
       <div>
         <button onClick={() => setResourceType("posts")}>Posts</button>
         <button onClick={() => setResourceType("users")}>Userss</button>{" "}
