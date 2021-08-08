@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Resources from "./Resources";
 import Memo from "./Memo.js";
+import RefName from "./RefName";
 
 function initState() {
   console.log("Init state");
@@ -28,6 +29,8 @@ function App() {
       <Resources />
       <hr />
       <Memo />
+      <hr />
+      <RefName />
     </>
   );
 }
