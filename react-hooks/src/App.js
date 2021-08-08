@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Resources from "./Resources";
 
 function initState() {
   console.log("Init state");
@@ -21,6 +22,8 @@ function App() {
       <span>{count}</span>
       <span>{theme}</span>
       <button onClick={increment}>+</button>
+      <hr />
+      <Resources />
     </>
   );
 }
