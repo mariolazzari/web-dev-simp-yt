@@ -2,6 +2,9 @@ import { useState } from "react";
 import Resources from "./Resources";
 import Memo from "./Memo.js";
 import RefName from "./RefName";
+import useLocalStorage from "./useLocalSgorage";
+import useUpdateLogger from "./useUpdateLogger";
+import CountReducer from "./CountReducer";
 
 function initState() {
   console.log("Init state");
@@ -10,6 +13,8 @@ function initState() {
 
 function App() {
   const [state, setState] = useState(() => initState());
+  const [value, setValue] = useLocalStorage("value", () => "hello");
+  useUpdateLogger(value);
 
   const { count, theme } = state;
 
@@ -31,6 +36,10 @@ function App() {
       <Memo />
       <hr />
       <RefName />
+      <br />
+      <input value={value} onChange={e => setValue(e.target.value)} />
+      <br />
+      <CountReducer />
     </>
   );
 }
