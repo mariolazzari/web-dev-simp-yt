@@ -1,0 +1,7 @@
+{
+  "name": "Mario",
+  "favoriteNumber": 27,
+  "isProgrammer": true,
+  "hobbies": ["music", "arts", "sports"],
+  "friends": []
+}
