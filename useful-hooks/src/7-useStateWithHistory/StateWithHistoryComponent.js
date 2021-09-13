@@ -1,10 +1,10 @@
-import { useState } from "react"
-import useStateWithHistory from "./useStateWithHistory"
+import { useState } from "react";
+import useStateWithHistory from "./useStateWithHistory";
 
 export default function StateWithHistoryComponent() {
   const [count, setCount, { history, pointer, back, forward, go }] =
-    useStateWithHistory(1)
-  const [name, setName] = useState("Kyle")
+    useStateWithHistory(1);
+  const [name, setName] = useState("Kyle");
 
   return (
     <div>
@@ -23,5 +23,5 @@ export default function StateWithHistoryComponent() {
       <button onClick={() => go(2)}>Go To Index 2</button>
       <button onClick={() => setName("John")}>Change Name</button>
     </div>
-  )
+  );
 }
